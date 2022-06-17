@@ -6,21 +6,27 @@ namespace Assignment1
 {
     class LightVehicle : Vehicle //Concrete Component//
     {
-        public override string GetName()
+        public LightVehicle(Engine engine, Carrier carrier, Towing towing) : base(engine, carrier, towing)
         {
-            return "Light vehicle";
+            this.Carrier = carrier;
+            this.Engine = engine;
+            this.Towing = towing;
         }
-        public override string GetCarrierCapabilities()
+        public override string GetVehicleDescription()
         {
-            return "2 people max and luggage"; 
+            return "Heavy Vehicle";
         }
-        public override string GetEngineSize()
+        public override string GetWifi()
         {
-            return "Medium";
+            return "No Wifi";
         }
-        public override string GetTowing()
+        public override string GetSoundSystem()
         {
-            return "No";
+            return "No SoundSystem";
+        }
+        public override string GetCamera()
+        {
+            return "No Camera";
         }
     }
     

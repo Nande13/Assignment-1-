@@ -7,21 +7,25 @@ namespace Assignment1
     abstract class VehicleDecorator : Vehicle //Decorator Base//
     {
         Vehicle Vehicle = null;
-        public VehicleDecorator(Vehicle vehicle)
+        public VehicleDecorator(Vehicle vehicle): base(vehicle)
         {
             this.Vehicle = vehicle;
         }
-        public override string GetCarrierCapabilities()
+        public override string GetVehicleDescription()
         {
-            return Vehicle.GetCarrierCapabilities();
+            return Vehicle.GetVehicleDescription();
         }
-        public override string GetEngineSize()
+        public override string GetWifi()
         {
-            return Vehicle.GetEngineSize();
+            return Vehicle.GetWifi();
         }
-        public override string GetTowing()
+        public override string GetSoundSystem()
         {
-            return Vehicle.GetTowing();
+            return Vehicle.GetSoundSystem();
+        }
+        public override string GetCamera()
+        {
+            return Vehicle.GetCamera();
         }
     }
 }

@@ -8,21 +8,28 @@ namespace Assignment1
 {
     class Motorbike : Vehicle //concreteComponent//
     {
-        public override string GetName()
+        //Strategy Pattern
+        public Motorbike(Engine engine, Carrier carrier, Towing towing) : base(engine, carrier, towing)
         {
-            return "Motobike";
+            this.Carrier = carrier;
+            this.Engine = engine;
+            this.Towing = towing;
         }
-        public override string GetCarrierCapabilities()
+        public override string GetVehicleDescription()
         {
-            return "Good and Driver";
+            return "Heavy Vehicle";
         }
-        public override string GetEngineSize()
+        public override string GetWifi()
         {
-            return "Small";
+            return "No Wifi";
         }
-        public override string GetTowing()
+        public override string GetSoundSystem()
         {
-            return "No";
+            return "No SoundSystem";
+        }
+        public override string GetCamera()
+        {
+            return "No Camera";
         }
 
     }
